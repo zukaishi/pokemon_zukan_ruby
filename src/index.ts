@@ -13,7 +13,7 @@ function elementReplace(element: HTMLCollectionBase ): void {
 }
 
 function katakanaToHiragana(str: string): string {
-    return str.replace(/[\u30a1-\u30f6]/g, function (match) {
+    return str.replace(/[\u30a1-\u30fc]/g, function (match) {
         var chr = match.charCodeAt(0) - 0x60;
         return String.fromCharCode(chr);
     });

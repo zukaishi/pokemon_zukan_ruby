@@ -1,5 +1,5 @@
 "use strict";
-['name', 'subname', 'name__loadItem', 'label__detail-features-type js-btn-resetPage'].forEach(function (value) { return elementReplace(document.getElementsByClassName(value)); });
+['name', 'subname', 'name__loadItem', ''].forEach(function (value) { return elementReplace(document.getElementsByClassName(value)); });
 function elementReplace(element) {
     for (var i = 0; i < element.length; i++) {
         var str = element[i].innerHTML;
@@ -12,7 +12,7 @@ function elementReplace(element) {
     }
 }
 function katakanaToHiragana(str) {
-    return str.replace(/[\u30a1-\u30f6]/g, function (match) {
+    return str.replace(/[\u30a1-\u30fc]/g, function (match) {
         var chr = match.charCodeAt(0) - 0x60;
         return String.fromCharCode(chr);
     });
